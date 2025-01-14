@@ -6,6 +6,7 @@
         "ms-python.debugpy",
         "ms-toolsai.datawrangler",
         "ms-python.isort",
-        "ms-python.pylint"
+        "ms-python.pylint",
+        "ms-python.autopep8"
     ]
 }
