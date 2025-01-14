@@ -1,6 +1,2 @@
-Include/
-Lib/
-Scripts/
 share/
-CACHEDIR.TAG
-pyvenv.cfg
+venv/
