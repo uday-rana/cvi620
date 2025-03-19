@@ -174,3 +174,6 @@ img/
 out/
 
 .ruff_cache
+
+data/Cat_Dog_Dataset
+data/MNIST_Dataset
