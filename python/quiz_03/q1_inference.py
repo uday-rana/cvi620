@@ -6,6 +6,7 @@ from joblib import load
 IMG_SIZE = (32, 32)
 
 clf = load("knn_classifier.z")
+lr = load("logistic_regression.z")
 
 for item in glob.glob("data/Cat_Dog_Dataset/test\\*\\*"):
     img = cv.imread(item)
@@ -14,10 +15,18 @@ for item in glob.glob("data/Cat_Dog_Dataset/test\\*\\*"):
     r_img = r_img.flatten()
     r_img = np.array([r_img])
 
-    pred = clf.predict(r_img)[0]
+    knn_pred = clf.predict(r_img)[0]
+    lr_pred = lr.predict(r_img)[0]
+    print(f"knn prediction: {knn_pred}, logistic regression prediction: {lr_pred}")
 
-    cv.putText(img, pred, (32, 32), cv.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-    cv.imshow("frame", img)
+    cv.putText(
+        img, f"KNN: {knn_pred}", (32, 32), cv.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2
+    )
+    cv.putText(
+        img, f"LR: {lr_pred}", (32, 64), cv.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2
+    )
+    cv.imshow("predictions", img)
     cv.waitKey(0)
+
 
 cv.destroyAllWindows()
