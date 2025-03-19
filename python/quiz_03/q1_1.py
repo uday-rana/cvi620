@@ -1,7 +1,7 @@
 import glob
 import cv2 as cv
 import numpy as np
-from joblib import dump, load
+from joblib import dump
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
