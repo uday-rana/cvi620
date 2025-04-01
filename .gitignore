@@ -178,3 +178,5 @@ out/
 data/Cat_Dog_Dataset
 data/MNIST_Dataset
 data/kapcha
+
+*.z
