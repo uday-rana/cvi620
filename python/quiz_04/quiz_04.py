@@ -62,16 +62,14 @@ def train_model():
             tf.keras.layers.BatchNormalization(),
             tf.keras.layers.MaxPool2D(),
             tf.keras.layers.Conv2D(32, (3, 3), activation="relu"),
-            tf.keras.layers.BatchNormalization(),
             tf.keras.layers.MaxPool2D(),
             tf.keras.layers.Flatten(),
             tf.keras.layers.Dense(100, activation="relu"),
-            tf.keras.layers.BatchNormalization(),
             tf.keras.layers.Dense(9, activation="softmax"),
         ]
     )
 
-    opt = tf.keras.optimizers.SGD(learning_rate=0.01)
+    opt = tf.keras.optimizers.SGD(learning_rate=0.001)
 
     model.compile(optimizer=opt, loss="categorical_crossentropy", metrics="accuracy")
 
