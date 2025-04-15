@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from keras.utils import to_categorical
-from keras.layers import Dense, Conv2D, MaxPool2D, Flatten, Conv2DTranspose
+from keras.layers import Dense, Conv2D, MaxPool2D, Flatten
 from keras.models import Sequential, save_model
 import matplotlib.pyplot as plt
 

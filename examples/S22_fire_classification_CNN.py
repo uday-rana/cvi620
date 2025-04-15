@@ -2,7 +2,6 @@ import glob
 import cv2
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import LabelEncoder
 from keras.utils import to_categorical
 from keras import models, layers
@@ -10,7 +9,6 @@ from keras import models, layers
 import warnings
 
 warnings.filterwarnings("ignore")
-from joblib import dump
 
 IMG_SIZE = (32, 32)
 
